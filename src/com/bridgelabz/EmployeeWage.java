@@ -1,13 +1,9 @@
 package com.bridgelabz;
 
 public class EmployeeWage {
-    public static void main(String[] args) {
-        int wagePerHr = 20;
-        int salary = 0;
-        int totalWorkingDays = 20;
-        int day = 1;
-        int maxWorkingHrs = 100;
-        int totalWorkingHrs = 0;
+    static int wagePerHr = 20, totalWorkingDays = 20, maxWorkingHrs = 100;
+    static void computeWage() {
+        int salary = 0, day = 1, totalWorkingHrs = 0;
         while (day <= totalWorkingDays && totalWorkingHrs <= maxWorkingHrs) {
             int random = (int) (Math.random() * 3);
             switch (random) {
@@ -24,5 +20,8 @@ public class EmployeeWage {
             day++;
         }
         System.out.println("Employee monthly wage is "+salary);
+    }
+    public static void main(String[] args) {
+        computeWage();
     }
 }
